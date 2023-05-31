@@ -1,9 +1,16 @@
+import { useState } from 'react'
 import './App.css';
 
-function App() {
+const App = () => {
+  const [searchEntity, setSearchEntity] = useState("")
+
+  const updateSearch = (e) => {
+    setSearchEntity(e.target.value)
+  }
+
   return (
-    <div>
-      
+    <div className="container">
+      <input className="input-field" placeHolder={"Enter a title..."} value={searchEntity} onChange={updateSearch}/>
     </div>
   );
 }
