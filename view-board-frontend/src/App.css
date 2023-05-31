@@ -1,19 +1,42 @@
 body {
   background-color: #222;
   color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  flex-direction: column;
 }
 
 .input-field {
+  position: absolute;
+  top: 20px;
   padding: 10px;
   font-size: 16px;
   border-radius: 5px;
   border: none;
   width: 300px;
+  margin-bottom: 20px;
+}
+
+.search-results {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+}
+
+.search-results > div {
+  width: 100%;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .search-results > div {
+    width: 50%;
+  }
 }

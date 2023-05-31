@@ -30,7 +30,7 @@ const App = () => {
       {searchResults.length > 0 && (
         <div className="search-results">
           {searchResults.map((result) => (
-            <div key={result.imdbId}>{result.title} Synopsis: {result.overview}</div>
+            <div key={result.imdbId}>{result.title}</div>
           ))}
         </div>
       )}
