@@ -5,6 +5,7 @@ import userService from './services/UserService'
 
 const App = () => {
   const [searchEntity, setSearchEntity] = useState("")
+  const [searchResults, setSearchResults] = useState([])
 
   const updateSearch = (e) => {
     setSearchEntity(e.target.value)
@@ -15,7 +16,8 @@ const App = () => {
       console.log(searchEntity)
       userService.getTitleInfo(searchEntity)
         .then(response => {
-          console.log(response)
+          console.log(response.result)
+          setSearchResults(response.result)
         })
     }
   }
@@ -24,6 +26,14 @@ const App = () => {
     <div className="container">
       <input className="input-field" placeholder={"Enter a title..."} value={searchEntity}
        onChange={updateSearch} onKeyDown={handleEnter}/>
+
+      {searchResults.length > 0 && (
+        <div className="search-results">
+          {searchResults.map((result) => (
+            <div key={result.imdbId}>{result.title} Synopsis: {result.overview}</div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
