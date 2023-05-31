@@ -1,3 +1,4 @@
+//API Used: https://rapidapi.com/movie-of-the-night-movie-of-the-night-default/api/streaming-availability
 import { useState } from 'react'
 import './App.css';
 
