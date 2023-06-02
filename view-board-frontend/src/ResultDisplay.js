@@ -1,8 +1,12 @@
 import './App.css'
 import './ResultDisplay.css'
 
+import ResultOptions from './ResultOptions'
+
 const ResultDisplay = ({result}) => {
-  console.log(result)
+  if (result.title === "Return of the Jedi") {
+    console.log(result)
+  }
   const displayImage = () => {
     if (result.backdropURLs.original) {
       return (
@@ -17,13 +21,25 @@ const ResultDisplay = ({result}) => {
 
   const displayStreamingInfo = (sites) => {
     if (sites) {
-      if (sites.us) {
-        return (
-          <div>
-            No Sites Available
-          </div>
-        )
+      let options = []
+      const serviceNames = Object.keys(sites)
+      for (let i = 0; i < serviceNames.length; i++) {
+        const curService = Object.values(sites)[i]
+        const curOption = {
+          name: serviceNames[i],
+          type: curService[0].type
+        }
+        options.push(curOption)
+        if (result.title === "Amongus") {
+          console.log(curService)
+        }
+
       }
+      return (
+        <div>
+          <ResultOptions options={options}/>
+        </div>
+      )
     } else {
       return (
         <div>
@@ -35,9 +51,8 @@ const ResultDisplay = ({result}) => {
   return (
     <div className="search-result">
       {displayImage()}
-      <div className="result-name"> {result.title} ({result.type === 'series' ? result.firstAirYear : result.year}) </div>
-      <div className="result-availability"> 
-        {result.type === 'movie' ? displayStreamingInfo(result.streamingInfo) : "not hi"}
+      <div className="result-name"> {result.title} ({result.type === 'series' ? result.firstAirYear : result.year}) 
+        {result.type === 'movie' ? displayStreamingInfo(result.streamingInfo.us) : <div> "not hi"</div>}
       </div>
     </div>
   )

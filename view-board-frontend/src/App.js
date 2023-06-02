@@ -19,10 +19,10 @@ const App = () => {
         .then(response => {
           setSearchResults(response.result)
         })
-      userService.getServices()
+      /*userService.getServices()
         .then(response => {
           console.log(response)
-        })
+        })*/
     }
   }
 
