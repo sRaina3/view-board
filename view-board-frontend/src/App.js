@@ -3,6 +3,7 @@ import { useState } from 'react'
 import './App.css';
 
 import userService from './services/UserService'
+import ResultDisplay from './ResultDisplay';
 
 const App = () => {
   const [searchEntity, setSearchEntity] = useState("")
@@ -17,8 +18,6 @@ const App = () => {
       console.log(searchEntity)
       userService.getTitleInfo(searchEntity)
         .then(response => {
-          console.log(response.result)
-          console.log(response.result[0].backdropURLs.original)
           setSearchResults(response.result)
         })
     }
@@ -31,16 +30,19 @@ const App = () => {
 
       {searchResults.length > 0 && (
         <div className="search-results">
-          {searchResults.map((result) => (
-            <div key={result.imdbId} className="search-result">
-              <img src={result.backdropURLs.original} alt={result.title} className="result-image" />
-              <div className="result-name"> {result.title} ({result.type === 'series' ? result.firstAirYear : result.year}) </div>
+          {searchResults.map((result) => 
+            <div key={result.imdbId}>
+              <ResultDisplay result={result} />
             </div>
-          ))}
+          )}
         </div>
       )}
     </div>
   );
 }
 
+/*<div key={result.imdbId} className="search-result">
+              <img src={result.backdropURLs.original} alt={result.title} className="result-image" />
+              <div className="result-name"> {result.title} ({result.type === 'series' ? result.firstAirYear : result.year}) </div>
+            </div>*/
 export default App;
