@@ -18,6 +18,7 @@ const App = () => {
       userService.getTitleInfo(searchEntity)
         .then(response => {
           console.log(response.result)
+          console.log(response.result[0].backdropURLs.original)
           setSearchResults(response.result)
         })
     }
@@ -31,7 +32,10 @@ const App = () => {
       {searchResults.length > 0 && (
         <div className="search-results">
           {searchResults.map((result) => (
-            <div key={result.imdbId}>{result.title}</div>
+            <div key={result.imdbId} className="search-result">
+              <img src={result.backdropURLs.original} alt={result.title} className="result-image" />
+              <div className="result-name"> {result.title} </div>
+            </div>
           ))}
         </div>
       )}

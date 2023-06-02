@@ -27,7 +27,7 @@ body {
   margin-top: 80px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center horizontally */
+  align-items: center; 
 }
 
 .search-results > div {
@@ -39,4 +39,22 @@ body {
   .search-results > div {
     width: 50%;
   }
+}
+
+.search-result {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.result-image {
+  width: 400px;
+  margin-left: 20px;
+}
+
+.result-name {
+  flex-grow: 1;
+  font-size: 30px;
+  margin-left: 20px;
+  font-weight: bold;
 }
