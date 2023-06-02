@@ -26,8 +26,9 @@ const ResultDisplay = ({result}) => {
       for (let i = 0; i < serviceNames.length; i++) {
         const curService = Object.values(sites)[i]
         const curOption = {
-          name: serviceNames[i],
-          type: curService[0].type
+          name: serviceNames[i].toUpperCase(),
+          type: curService[0].type,
+          link: curService[0].link
         }
         options.push(curOption)
         if (result.title === "Amongus") {
@@ -52,7 +53,7 @@ const ResultDisplay = ({result}) => {
     <div className="search-result">
       {displayImage()}
       <div className="result-name"> {result.title} ({result.type === 'series' ? result.firstAirYear : result.year}) 
-        {result.type === 'movie' ? displayStreamingInfo(result.streamingInfo.us) : <div> "not hi"</div>}
+        {result.type === 'movie' ? displayStreamingInfo(result.streamingInfo.us) : <div> Currently not Working for Series</div>}
       </div>
     </div>
   )

@@ -6,8 +6,9 @@ const ResultOptions = ({options}) => {
     <div>
       {options.map((op) => (
         <div className="golden-text" key={op.name}>
-          Available on: {op.name} 
-          <p>View Type: {op.type} </p>
+          {op.name} 
+          <div>View Type: {op.type} </div>
+          <a href={op.link}>Click here to View</a>
         </div>
       ))}
     </div>
