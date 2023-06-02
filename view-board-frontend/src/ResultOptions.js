@@ -8,7 +8,7 @@ const ResultOptions = ({options}) => {
         <div className="golden-text" key={op.name}>
           {op.name} 
           <div>View Type: {op.type} </div>
-          <a href={op.link}>Click here to View</a>
+          <a href={op.link} target="_blank" rel="noreferrer">Click here to View</a>
         </div>
       ))}
     </div>
