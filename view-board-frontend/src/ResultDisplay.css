@@ -1,0 +1,16 @@
+.search-result {
+  display: flex;
+  align-items: flex-start;
+}
+
+.result-image {
+  width: 400px;
+  height: 240px;
+  margin-left: 20px;
+}
+
+.result-name {
+  flex-grow: 1;
+  font-size: 30px;
+  margin-left: 10px;
+}

@@ -19,6 +19,18 @@ const getTitleInfo = (searchEntity) => {
   return request.then(response => response.data)
 }
 
-const userService = {getTitleInfo}
+const getServices = () => {
+  const options = {
+    method: 'GET',
+    url: `${baseURL}services`,
+    headers: {
+      'X-RapidAPI-Key': apiKey,
+    }
+  }
+  const request = axios.request(options)
+  return request.then(response => response.data)
+}
+
+const userService = {getTitleInfo, getServices}
 
 export default userService

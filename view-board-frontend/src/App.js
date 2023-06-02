@@ -15,10 +15,13 @@ const App = () => {
 
   const handleEnter = (e) => {
     if (e.key === 'Enter' && searchEntity.length > 2) {
-      console.log(searchEntity)
       userService.getTitleInfo(searchEntity)
         .then(response => {
           setSearchResults(response.result)
+        })
+      userService.getServices()
+        .then(response => {
+          console.log(response)
         })
     }
   }
