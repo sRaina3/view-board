@@ -34,7 +34,7 @@ const App = () => {
           {searchResults.map((result) => (
             <div key={result.imdbId} className="search-result">
               <img src={result.backdropURLs.original} alt={result.title} className="result-image" />
-              <div className="result-name"> {result.title} </div>
+              <div className="result-name"> {result.title} ({result.type === 'series' ? result.firstAirYear : result.year}) </div>
             </div>
           ))}
         </div>
