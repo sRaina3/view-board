@@ -1,6 +1,6 @@
 import axios from 'axios'
 const baseURL = 'https://streaming-availability.p.rapidapi.com/v2/'
-const apiKey = '8ae7ce15a1mshcb425916ddfc8fap1b0a7djsnb36bc59d6a3e'
+const apiKey = process.env.REACT_APP_API_KEY
 
 const getTitleInfo = (searchEntity) => {
   const options = {
