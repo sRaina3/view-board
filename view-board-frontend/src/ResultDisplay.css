@@ -20,5 +20,20 @@
   background-color: lightpink;
   border: 1px solid red;
   padding: 5px;
+  width: 330px;
+  font-size: 20px;
   margin-top: 20px;
+}
+
+.no-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(2, 2, 2);
+  font-weight: bold;
+  font-size: 30px;
+  width: 400px;
+  height: 240px;
+  margin-left: 20px;
+  background-color: rgb(148, 152, 70);
 }

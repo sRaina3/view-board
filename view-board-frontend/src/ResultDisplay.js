@@ -10,9 +10,13 @@ const ResultDisplay = ({result}) => {
       return (
         <img src={result.backdropURLs.original} alt={result.title} className="result-image" />
       )
-    } else {
+    } else if (result.posterURLs.original) {
       return (
         <img src={result.posterURLs.original} alt={result.title} className="result-image" />
+      )
+    } else {
+      return (
+        <div className="no-image">No image available</div>
       )
     }
   }
