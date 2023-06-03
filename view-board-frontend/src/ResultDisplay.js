@@ -37,8 +37,8 @@ const ResultDisplay = ({result}) => {
       )
     } else {
       return (
-        <div>
-          No Sites Available
+        <div className='error-message'>
+          Not Currently Available for Streaming
         </div>
       )
     }

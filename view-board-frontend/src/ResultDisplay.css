@@ -14,3 +14,11 @@
   font-size: 30px;
   margin-left: 10px;
 }
+
+.error-message {
+  color: red;
+  background-color: lightpink;
+  border: 1px solid red;
+  padding: 5px;
+  margin-top: 20px;
+}
