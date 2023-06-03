@@ -1,4 +1,5 @@
 //API Used: https://rapidapi.com/movie-of-the-night-movie-of-the-night-default/api/streaming-availability
+// 1250x620
 import { useState } from 'react'
 import './App.css';
 
@@ -27,20 +28,20 @@ const App = () => {
   }
 
   return (
-    <div className="container">
-      <div className='title-text'>Find Streaming Availabilities</div>
-      <input className="input-field" placeholder={"Enter a title..."} value={searchEntity}
-       onChange={updateSearch} onKeyDown={handleEnter}/>
-
-      {searchResults.length > 0 && (
-        <div className="search-results">
-          {searchResults.map((result) => 
-            <div key={result.imdbId}>
-              <ResultDisplay result={result} />
-            </div>
-          )}
-        </div>
-      )}
+    <div className="container gradient__bg">
+        <h1 className='gradient__text'>Find Streaming Availabilities</h1>
+        <input className="input-field" placeholder={"Enter a title..."} value={searchEntity}
+        onChange={updateSearch} onKeyDown={handleEnter}/>
+        {searchResults.length > 0 && (
+          <div className="search-results">
+            {searchResults.map((result) => 
+              <div key={result.imdbId}>
+                <ResultDisplay result={result} />
+              </div>
+            )}
+          </div>
+        )}
+        <h1 className='initial-info-title'>Millions of movies and TV Shows to Explore</h1>
     </div>
   );
 }

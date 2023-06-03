@@ -1,8 +1,5 @@
 body {
-  background-color: #222;
-  color: #fff;
-  margin: 0;
-  padding: 0;
+  background: var(--color-bg);
 }
 
 .container {
@@ -10,13 +7,10 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-
-.title-text {
-  color: goldenrod;
-  font-weight: bold;
-  font-size: 60px;
-  margin-top: 30px;
+  position:absolute;
+  top:0px;
+  right:0px;
+  left:0px;
 }
 
 .input-field {
@@ -25,7 +19,6 @@ body {
   border-radius: 5px;
   border: none;
   width: 300px;
-  margin-top: 20px;
 }
 
 .search-results {
@@ -43,4 +36,33 @@ body {
   .search-results > div {
     width: 50%;
   }
+}
+
+.gradient__bg {
+    background:-moz-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+    background:-webkit-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+    background:-o-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+    background:-ms-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+    background:radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+}
+
+.gradient__text {
+  background: var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.initial-info-title {
+  text-align: center;
+  color: goldenrod;
+  font-size: 50px;
+  font-weight: bold;
+  width: 500px;
 }
