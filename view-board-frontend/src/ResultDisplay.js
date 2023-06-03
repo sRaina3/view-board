@@ -4,9 +4,6 @@ import './ResultDisplay.css'
 import ResultOptions from './ResultOptions'
 
 const ResultDisplay = ({result}) => {
-  if (result.title === "Return of the Jedi") {
-    console.log(result)
-  }
   const displayImage = () => {
     if (result.backdropURLs.original) {
       return (
@@ -31,10 +28,6 @@ const ResultDisplay = ({result}) => {
           link: curService[0].link
         }
         options.push(curOption)
-        if (result.title === "Amongus") {
-          console.log(curService)
-        }
-
       }
       return (
         <div>
@@ -53,7 +46,7 @@ const ResultDisplay = ({result}) => {
     <div className="search-result">
       {displayImage()}
       <div className="result-name"> {result.title} ({result.type === 'series' ? result.firstAirYear : result.year}) 
-        {result.type === 'movie' ? displayStreamingInfo(result.streamingInfo.us) : <div> Currently not Working for Series</div>}
+        {result.type === 'movie' ? displayStreamingInfo(result.streamingInfo.us) : displayStreamingInfo(result.seasons[0].streamingInfo.us)}
       </div>
     </div>
   )
