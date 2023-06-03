@@ -22,6 +22,8 @@ const ResultDisplay = ({result}) => {
   }
 
   const displayStreamingInfo = (sites) => {
+    console.log(result.title)
+    console.log(sites)
     if (sites) {
       let options = []
       const serviceNames = Object.keys(sites)
@@ -51,7 +53,7 @@ const ResultDisplay = ({result}) => {
     <div className="search-result">
       {displayImage()}
       <div className="result-name"> {result.title} ({result.type === 'series' ? result.firstAirYear : result.year}) 
-        {result.streamingInfo ? displayStreamingInfo(result.streamingInfo.us) : displayStreamingInfo(result.seasons[0].streamingInfo.us)}
+        {Object.keys(result.streamingInfo).length === 1 || result.type === 'movie' ? displayStreamingInfo(result.streamingInfo.us) : displayStreamingInfo(result.seasons[0].streamingInfo.us)}
       </div>
     </div>
   )
