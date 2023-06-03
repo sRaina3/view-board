@@ -4,6 +4,7 @@ import './ResultDisplay.css'
 import ResultOptions from './ResultOptions'
 
 const ResultDisplay = ({result}) => {
+  console.log(result)
   const displayImage = () => {
     if (result.backdropURLs.original) {
       return (
@@ -46,7 +47,7 @@ const ResultDisplay = ({result}) => {
     <div className="search-result">
       {displayImage()}
       <div className="result-name"> {result.title} ({result.type === 'series' ? result.firstAirYear : result.year}) 
-        {result.type === 'movie' ? displayStreamingInfo(result.streamingInfo.us) : displayStreamingInfo(result.seasons[0].streamingInfo.us)}
+        {result.streamingInfo ? displayStreamingInfo(result.streamingInfo.us) : displayStreamingInfo(result.seasons[0].streamingInfo.us)}
       </div>
     </div>
   )

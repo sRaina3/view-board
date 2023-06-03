@@ -1,7 +1,6 @@
 import "./ResultOptions.css"
 
 const ResultOptions = ({options}) => {
-  console.log(options)
   return (
     <div>
       {options.map((op) => (
