@@ -28,6 +28,7 @@ const App = () => {
 
   return (
     <div className="container">
+      <div className='title-text'>Find Streaming Availabilities</div>
       <input className="input-field" placeholder={"Enter a title..."} value={searchEntity}
        onChange={updateSearch} onKeyDown={handleEnter}/>
 
