@@ -15,10 +15,10 @@ const App = () => {
 
   const handleEnter = (e) => {
     if (e.key === 'Enter' && searchEntity.length > 2) {
-      /*userService.getTitleInfo(searchEntity)
+      userService.getTitleInfo(searchEntity)
         .then(response => {
           setSearchResults(response.result)
-        })*/
+        })
       userService.getServices()
         .then(response => {
           console.log(response)
@@ -27,7 +27,8 @@ const App = () => {
   }
 
   return (
-    <div className="container gradient__bg">
+    <div>
+      <div className="container gradient__bg">
         <h1 className='gradient__text'>Find Streaming Availabilities</h1>
         <input className="input-field" placeholder={"Enter a title..."} value={searchEntity}
         onChange={updateSearch} onKeyDown={handleEnter}/>
@@ -37,7 +38,7 @@ const App = () => {
               <div key={result.imdbId}> <ResultDisplay result={result} /> </div>
             )}
           </div> 
-          : <div>
+          : <div className="initial-info-container">
             <h1 className='initial-info-title'>Millions of movies and TV Shows to Explore</h1>
             <h1 className='stream-stats'>20+ Streaming Platforms Supported</h1>
             <div className="image-row">
@@ -51,7 +52,14 @@ const App = () => {
             </div>
           </div>
         }
-        
+      </div>
+      <div className='footer'>
+        <div className='footer-text'>My GitHub: &nbsp;
+        <span className="shake-animation">
+          <a className="gradient__text-small" href='https://github.com/sRaina3' target="_blank" rel="noreferrer">Saransh Raina</a>
+        </span>
+        </div>
+      </div>
     </div>
   );
 }
