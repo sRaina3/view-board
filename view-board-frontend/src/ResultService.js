@@ -1,3 +1,5 @@
+import './ResultService.css'
+
 const ResultService = ({name}) => {
   const imgs = [
     {name: 'ALL4', url: ''},

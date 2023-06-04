@@ -11,6 +11,7 @@
 }
 
 .result-name {
+  width: 770px;
   flex-grow: 1;
   color: white;
   font-size: 30px;

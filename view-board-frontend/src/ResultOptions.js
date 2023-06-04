@@ -3,13 +3,16 @@ import "./ResultOptions.css"
 
 const ResultOptions = ({options}) => {
   return (
-    <div>
+    <div className='service-row'>
       {options.map((op) => (
-        <div className="golden-text" key={op.name}>
-          {op.name} 
-          <div>View Type: {op.type} </div>
-          <a href={op.link} target="_blank" rel="noreferrer">Click here to View</a>
-          <ResultService name={op.name}/>
+        <div key={op.name}>
+          <a className="href-tag" href={op.link} target="_blank" rel="noreferrer">
+            <div className="service-info">
+              <ResultService name={op.name}/>
+              <div className="golden-text">{op.name}</div> 
+              <div className="golden-text">({op.type.toUpperCase() === "BUY" ? "PURCHARSE" : op.type.toUpperCase()})</div>
+            </div>
+          </a>
         </div>
       ))}
     </div>

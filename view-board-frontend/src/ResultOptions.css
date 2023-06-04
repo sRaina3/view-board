@@ -1,5 +1,31 @@
 .golden-text {
-  font-size: 14px;
+  font-size: 18px;
+  justify-content: center;
   color: goldenrod;
-  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.service-row {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.service-row img {
+  width: 65px;
+  height: auto; 
+  border-radius: 12px;
+}
+
+.service-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.href-tag {
+  text-decoration: none;
 }
