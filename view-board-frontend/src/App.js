@@ -19,10 +19,6 @@ const App = () => {
         .then(response => {
           setSearchResults(response.result)
         })
-      userService.getServices()
-        .then(response => {
-          console.log(response)
-        })
     }
   }
 
