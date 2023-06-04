@@ -1,3 +1,4 @@
+import ResultService from './ResultService'
 import "./ResultOptions.css"
 
 const ResultOptions = ({options}) => {
@@ -8,6 +9,7 @@ const ResultOptions = ({options}) => {
           {op.name} 
           <div>View Type: {op.type} </div>
           <a href={op.link} target="_blank" rel="noreferrer">Click here to View</a>
+          <ResultService name={op.name}/>
         </div>
       ))}
     </div>

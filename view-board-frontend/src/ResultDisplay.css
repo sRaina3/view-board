@@ -12,6 +12,7 @@
 
 .result-name {
   flex-grow: 1;
+  color: white;
   font-size: 30px;
   margin-left: 10px;
 }
