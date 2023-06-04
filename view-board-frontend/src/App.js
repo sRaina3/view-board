@@ -1,5 +1,4 @@
 //API Used: https://rapidapi.com/movie-of-the-night-movie-of-the-night-default/api/streaming-availability
-// 1250x620
 import { useState } from 'react'
 import './App.css';
 
@@ -41,6 +40,15 @@ const App = () => {
           : <div>
             <h1 className='initial-info-title'>Millions of movies and TV Shows to Explore</h1>
             <h1 className='stream-stats'>20+ Streaming Platforms Supported</h1>
+            <div className="image-row">
+              <img src='https://images.justwatch.com/icon/147638351/s100/icon.webp' alt="disney"/>
+              <img src='https://images.justwatch.com/icon/207360008/s100/icon.webp' alt="netflix"/>
+              <img src='https://images.justwatch.com/icon/52449539/s100/icon.webp' alt="amazon"/>
+              <img src='https://images.justwatch.com/icon/190848813/s100/icon.webp' alt="apple tv"/>
+              <img src='https://images.justwatch.com/icon/305458112/s100/icon.webp' alt="hbo max"/>
+              <img src='https://images.justwatch.com/icon/194173871/s100/icon.webp' alt="peacock"/>
+              <img src='https://images.justwatch.com/icon/116305230/s100/icon.webp' alt="hulu"/>
+            </div>
           </div>
         }
         
@@ -48,8 +56,4 @@ const App = () => {
   );
 }
 
-/*<div key={result.imdbId} className="search-result">
-              <img src={result.backdropURLs.original} alt={result.title} className="result-image" />
-              <div className="result-name"> {result.title} ({result.type === 'series' ? result.firstAirYear : result.year}) </div>
-            </div>*/
 export default App;
