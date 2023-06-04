@@ -15,10 +15,10 @@ body {
 
 .input-field {
   padding: 10px;
-  font-size: 16px;
+  font-size: 24px;
   border-radius: 5px;
   border: none;
-  width: 300px;
+  width: 500px;
 }
 
 .search-results {
@@ -65,4 +65,8 @@ body {
   font-size: 50px;
   font-weight: bold;
   width: 500px;
+}
+
+.stream-stats {
+  color: rgb(219, 213, 213);
 }
