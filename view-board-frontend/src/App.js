@@ -24,7 +24,7 @@ const App = () => {
 
   return (
     <div>
-      <div className="container gradient__bg">
+      <div className="container">
         <h1 className='gradient__text'>Find Streaming Availabilities</h1>
         <input className="input-field" placeholder={"Enter a title..."} value={searchEntity}
           onChange={updateSearch} onKeyDown={handleEnter}/>

@@ -1,5 +1,9 @@
 body {
-  background: var(--color-bg);
+  background:-moz-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+  background:-webkit-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+  background:-o-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+  background:-ms-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+  background:radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
 }
 
 .container {
@@ -19,18 +23,17 @@ body {
   border-radius: 5px;
   border: none;
   width: 500px;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 .search-results {
-  margin-top: 20px;
+  margin-top: 250px;
   flex-direction: column;
   align-items: start;
 }
 
 .search-results > div {
   width: 100%;
-  padding: 10px;
 }
 
 @media (max-width: 768px) {
