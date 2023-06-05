@@ -52,7 +52,7 @@ const ResultDisplay = ({result}) => {
         {Object.keys(result.streamingInfo).length === 1 || result.type === 'movie' ? 
           displayStreamingInfo(result.streamingInfo.us) : 
           displayStreamingInfo(result.seasons[0].streamingInfo.us)}
-        Hi
+        <div className="result-overview">{result.overview}</div>
       </div>
     </div>
   )
