@@ -52,9 +52,11 @@ const ResultDisplay = ({result}) => {
         {Object.keys(result.streamingInfo).length === 1 || result.type === 'movie' ? 
           displayStreamingInfo(result.streamingInfo.us) : 
           displayStreamingInfo(result.seasons[0].streamingInfo.us)}
-        <div className="result-overview">{result.overview.substring(0, 480)}{result.overview.length > 482 ? "..." : ""}</div>
-        <div className="imdb-box">IMDb</div>
-        <span className="imdb-text"> {result.imdbRating/10}</span>
+        <div className="result-overview">{result.overview.substring(0, 480)}{result.overview.length > 480 ? "..." : ""}</div>
+        <a className="href-tag" href={`https://www.imdb.com/title/${result.imdbId}/`} target="_blank" rel="noreferrer">
+          <div className="imdb-box">IMDb</div>
+          <span className="imdb-text"> {result.imdbRating/10}</span>
+        </a>
       </div>
     </div>
   )
