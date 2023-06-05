@@ -6,11 +6,7 @@ import ResultOptions from './ResultOptions'
 const ResultDisplay = ({result}) => {
   console.log(result)
   const displayImage = () => {
-    if (result.backdropURLs.original) {
-      return (
-        <img src={result.backdropURLs.original} alt={result.title} className="result-image" />
-      )
-    } else if (result.posterURLs.original) {
+    if (result.posterURLs.original) {
       return (
         <img src={result.posterURLs.original} alt={result.title} className="result-image" />
       )
@@ -53,7 +49,10 @@ const ResultDisplay = ({result}) => {
     <div className="search-result">
       {displayImage()}
       <div className="result-name"> {result.title} ({result.type === 'series' ? result.firstAirYear : result.year}) 
-        {Object.keys(result.streamingInfo).length === 1 || result.type === 'movie' ? displayStreamingInfo(result.streamingInfo.us) : displayStreamingInfo(result.seasons[0].streamingInfo.us)}
+        {Object.keys(result.streamingInfo).length === 1 || result.type === 'movie' ? 
+          displayStreamingInfo(result.streamingInfo.us) : 
+          displayStreamingInfo(result.seasons[0].streamingInfo.us)}
+        Hi
       </div>
     </div>
   )

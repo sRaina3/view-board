@@ -1,5 +1,5 @@
 .golden-text {
-  font-size: 18px;
+  font-size: 15px;
   justify-content: center;
   color: goldenrod;
   text-align: center;
@@ -14,16 +14,27 @@
 }
 
 .service-row img {
-  width: 65px;
+  width: 60px;
   height: auto; 
   border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.service-row img:hover {
+  transform: scale(1.1);
 }
 
 .service-info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.service-info:hover {
+  transform: scale(1.1);
 }
 
 .href-tag {
