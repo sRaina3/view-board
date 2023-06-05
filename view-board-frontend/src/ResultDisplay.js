@@ -56,7 +56,7 @@ const ResultDisplay = ({result}) => {
         <div className="result-overview">
           {result.overview.substring(0, 440)}{result.overview.length > 440 ? "..." : ""}
         </div>
-        <a className="href-tag" href={`https://www.imdb.com/title/${result.imdbId}/`} target="_blank" rel="noreferrer">
+        <a className="imdb-tag" href={`https://www.imdb.com/title/${result.imdbId}/`} target="_blank" rel="noreferrer">
           <div className="imdb-box">IMDb</div>
           <span className="imdb-text"> {result.imdbRating/10}</span>
         </a>
