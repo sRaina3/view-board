@@ -10,7 +10,9 @@ const ResultOptions = ({options}) => {
             <div className="service-info">
               <ResultService name={op.name}/>
               <div className="golden-text">{op.name}</div> 
-              <div className="golden-text">({op.type.toUpperCase() === "BUY" ? "PURCHARSE" : op.type.toUpperCase()})</div>
+              <div className="golden-text">
+                ({op.type.toUpperCase() === "BUY" ? "PURCHARSE" : op.type.toUpperCase()})
+              </div>
             </div>
           </a>
         </div>

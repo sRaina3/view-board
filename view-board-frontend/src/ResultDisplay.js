@@ -48,11 +48,14 @@ const ResultDisplay = ({result}) => {
   return (
     <div className="search-result">
       {displayImage()}
-      <div className="result-name">{result.title} ({result.type === 'series' ? result.firstAirYear : result.year})
+      <div className="result-name">
+        {result.title} ({result.type === 'series' ? result.firstAirYear : result.year})
         {Object.keys(result.streamingInfo).length === 1 || result.type === 'movie' ? 
           displayStreamingInfo(result.streamingInfo.us) : 
           displayStreamingInfo(result.seasons[0].streamingInfo.us)}
-        <div className="result-overview">{result.overview.substring(0, 480)}{result.overview.length > 480 ? "..." : ""}</div>
+        <div className="result-overview">
+          {result.overview.substring(0, 440)}{result.overview.length > 440 ? "..." : ""}
+        </div>
         <a className="href-tag" href={`https://www.imdb.com/title/${result.imdbId}/`} target="_blank" rel="noreferrer">
           <div className="imdb-box">IMDb</div>
           <span className="imdb-text"> {result.imdbRating/10}</span>
