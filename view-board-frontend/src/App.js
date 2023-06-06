@@ -22,9 +22,14 @@ const App = () => {
     }
   }
 
+  const handleHomePage = (e) => {
+    setSearchResults([])
+  }
+
   return (
     <div>
       <div className="container">
+        <img onClick={handleHomePage} src="/viewboard-logo.png" alt="Logo" className="logo" />
         <h1 className='gradient__text'>Find Streaming Availabilities</h1>
         <input className="input-field" placeholder={"Enter a title..."} value={searchEntity}
           onChange={updateSearch} onKeyDown={handleEnter}/>
