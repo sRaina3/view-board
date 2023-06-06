@@ -2,10 +2,10 @@ import './ResultService.css'
 
 const ResultService = ({name}) => {
   const imgs = [
-    {name: 'ALL4', url: 'https://play-lh.googleusercontent.com/OOahZdnHEfVWUfWaVA_M01JdNyPSMv7umDjK2oeksFX-I_m8gSFaZPtEo7967FmkmK4'},
+    {name: 'ALL4', url: 'https://yt3.googleusercontent.com/Vo6o0rIW99I2zHhSr7Ycs9Kd5NkqmoBhEOvHyadetGEbLQVE_RNYvbepNuGfrzx6jTWjA0Mc65k=s900-c-k-c0x00ffffff-no-rj'},
     {name: 'APPLE', url: 'https://images.justwatch.com/icon/190848813/s100/icon.webp'},
     {name: 'BRITBOX', url: 'https://play-lh.googleusercontent.com/IZmZF3X9QgCF26V6oYtpZDhnWdjbhg0idG7HSkdIV2PyumE80s0faHGkSMJe2MV4JCQ'},
-    {name: 'CRAVE', url: 'https://play-lh.googleusercontent.com/X4c-IrRgJx1WAf2Zfr8T-HOYS6mbTrttCt8eJ9MJzRlr6AIFvky6sOruDkTst6Zz_Q'},
+    {name: 'CRAVE', url: 'https://yt3.googleusercontent.com/ytc/AGIKgqOi-3uvGRiicG_kzZc9jOnTSaR8m7RSqbqZGYqL2g=s900-c-k-c0x00ffffff-no-rj'},
     {name: 'CURIOSITY', url: 'https://images.justwatch.com/icon/48600036/s100/icon.webp'},
     {name: 'DISNEY', url: 'https://images.justwatch.com/icon/147638351/s100/icon.webp'},
     {name: 'HBO', url: 'https://images.justwatch.com/icon/305458112/s100/icon.webp'},
