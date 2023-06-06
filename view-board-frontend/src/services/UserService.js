@@ -1,11 +1,12 @@
 import axios from 'axios'
-const baseURL = 'https://streaming-availability.p.rapidapi.com/v2/'
+const baseURLStream = 'https://streaming-availability.p.rapidapi.com/v2/'
+const baseURLMD = 'https://moviesdatabase.p.rapidapi.com/'
 const apiKey = process.env.REACT_APP_API_KEY
 
 const getTitleInfo = (searchEntity) => {
   const options = {
     method: 'GET',
-    url: `${baseURL}search/title`,
+    url: `${baseURLStream}search/title`,
     params: {
       title: searchEntity,
       country: 'us',
@@ -22,7 +23,7 @@ const getTitleInfo = (searchEntity) => {
 const getServices = () => {
   const options = {
     method: 'GET',
-    url: `${baseURL}services`,
+    url: `${baseURLStream}services`,
     headers: {
       'X-RapidAPI-Key': apiKey,
     }
@@ -31,6 +32,19 @@ const getServices = () => {
   return request.then(response => response.data)
 }
 
-const userService = {getTitleInfo, getServices}
+const getUpcoming = () => {
+  const options = {
+    method: 'GET',
+    url: `${baseURLMD}titles/x/upcoming`,
+    headers: {
+      'X-RapidAPI-Key': apiKey,
+      'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
+    }
+  }
+  const request = axios.request(options)
+  return request.then(response => response.data)
+}
+
+const userService = {getTitleInfo, getServices, getUpcoming}
 
 export default userService
