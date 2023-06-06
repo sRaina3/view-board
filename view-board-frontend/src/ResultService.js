@@ -2,10 +2,10 @@ import './ResultService.css'
 
 const ResultService = ({name}) => {
   const imgs = [
-    {name: 'ALL4', url: 'https://yt3.googleusercontent.com/Vo6o0rIW99I2zHhSr7Ycs9Kd5NkqmoBhEOvHyadetGEbLQVE_RNYvbepNuGfrzx6jTWjA0Mc65k=s900-c-k-c0x00ffffff-no-rj'},
+    {name: 'ALL4', url: 'https://seeklogo.com/images/C/Channel_4-logo-ADE347836C-seeklogo.com.png'},
     {name: 'APPLE', url: 'https://images.justwatch.com/icon/190848813/s100/icon.webp'},
-    {name: 'BRITBOX', url: 'https://play-lh.googleusercontent.com/IZmZF3X9QgCF26V6oYtpZDhnWdjbhg0idG7HSkdIV2PyumE80s0faHGkSMJe2MV4JCQ'},
-    {name: 'CRAVE', url: 'https://yt3.googleusercontent.com/ytc/AGIKgqOi-3uvGRiicG_kzZc9jOnTSaR8m7RSqbqZGYqL2g=s900-c-k-c0x00ffffff-no-rj'},
+    {name: 'BRITBOX', url: 'https://media.wired.co.uk/photos/606d9f697aff197af7c72c90/1:1/w_1999,h_1999,c_limit/britbox.jpg'},
+    {name: 'CRAVE', url: 'https://exclaim.ca/images/cravve_2.png'},
     {name: 'CURIOSITY', url: 'https://images.justwatch.com/icon/48600036/s100/icon.webp'},
     {name: 'DISNEY', url: 'https://images.justwatch.com/icon/147638351/s100/icon.webp'},
     {name: 'HBO', url: 'https://images.justwatch.com/icon/305458112/s100/icon.webp'},
@@ -26,7 +26,6 @@ const ResultService = ({name}) => {
   ]
 
   const pos = imgs.find(img => img.name === name)
-  console.log(pos.name + '    ' + name)
   return (
     <div>
       <img src={pos.url} alt="service"/>

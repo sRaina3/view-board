@@ -53,24 +53,12 @@ const App = () => {
             <h1 className='stream-stats'>20+ Streaming Platforms Supported</h1>
           </div>
           <div className="image-column-one">
-              <ResultService name='ALL4'/>
-              <ResultService name='APPLE'/>
-              <ResultService name='BRITBOX'/>
-              <ResultService name='CRAVE'/>
-              <ResultService name='CURIOSITY'/>
-              <ResultService name='DISNEY'/>
-              <ResultService name='HBO'/>
-              <ResultService name='HOTSTAR'/>
-              <ResultService name='HULU'/>
-              <ResultService name='IPLAYER'/>
-              <ResultService name='MUBI'/>
-              <ResultService name='NETFLIX'/>
-              <ResultService name='NOW'/>
-              <ResultService name='PARAMOUNT'/>
-              <ResultService name='PEACOCK'/>
-              <ResultService name='PRIME'/>
-              <ResultService name='SHOWTIME'/>
-              <ResultService name='ZEE5'/>
+              <ResultService name='ALL4'/> <ResultService name='APPLE'/> <ResultService name='BRITBOX'/>
+              <ResultService name='CRAVE'/> <ResultService name='CURIOSITY'/> <ResultService name='DISNEY'/>
+              <ResultService name='HBO'/> <ResultService name='HOTSTAR'/> <ResultService name='HULU'/>
+              <ResultService name='IPLAYER'/> <ResultService name='MUBI'/> <ResultService name='NETFLIX'/>
+              <ResultService name='NOW'/> <ResultService name='PARAMOUNT'/> <ResultService name='PEACOCK'/>
+              <ResultService name='PRIME'/> <ResultService name='SHOWTIME'/> <ResultService name='ZEE5'/>
           </div>
         </div>
       }
