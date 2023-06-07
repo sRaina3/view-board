@@ -1,0 +1,21 @@
+.vertical-navbar {
+  position: fixed;
+  top: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px; 
+  height: 100vh; 
+}
+
+.vertical-navbar a {
+  text-decoration: none;
+  color: #ffffff; 
+  margin-bottom: 10px; 
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.vertical-navbar img {
+  max-width: 100%;
+}

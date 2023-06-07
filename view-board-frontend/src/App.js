@@ -3,7 +3,6 @@
 //https://rapidapi.com/SAdrian/api/moviesdatabase
 import { useState, useEffect } from 'react'
 import './App.css';
-import logo from './assets/viewboard-logo.png'
 
 import userService from './services/UserService'
 import ResultDisplay from './ResultDisplay';
@@ -36,10 +35,6 @@ const App = () => {
     }
   }
 
-  const handleHomePage = (e) => {
-    setSearchResults([])
-  }
-
   const handleNextImage = () => {
     if (curUpcoming < 9) {
       setCurUpcoming(curUpcoming + 1)
@@ -51,7 +46,6 @@ const App = () => {
   return (
     <div>
       <div className="container">
-        <img onClick={handleHomePage} src={logo} alt="Logo" className="logo" />
         <h1 className='gradient__text'>Find Streaming Availabilities</h1>
         <input className="input-field" placeholder={"Enter a title..."} value={searchEntity}
           onChange={updateSearch} onKeyDown={handleEnter}/>
