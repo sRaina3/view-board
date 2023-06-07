@@ -1,4 +1,3 @@
-import './App.css'
 import './ResultDisplay.css'
 
 import ResultOptions from './ResultOptions'

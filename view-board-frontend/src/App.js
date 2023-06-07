@@ -5,8 +5,8 @@ import { useState } from 'react'
 import './App.css';
 
 import userService from './services/UserService'
-import ResultDisplay from './ResultDisplay';
-import { StreamLogos } from './components';
+import {ResultDisplay} from './containers';
+import {StreamLogos} from './components';
 
 const App = () => {
   const [searchEntity, setSearchEntity] = useState("")

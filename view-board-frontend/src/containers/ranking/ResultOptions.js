@@ -1,4 +1,4 @@
-import { StreamLogos } from './components'
+import { StreamLogos } from '../../components'
 
 import "./ResultOptions.css"
 
