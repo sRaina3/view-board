@@ -1,4 +1,5 @@
-import ResultService from './ResultService'
+import { StreamLogos } from './components'
+
 import "./ResultOptions.css"
 
 const ResultOptions = ({options}) => {
@@ -8,7 +9,7 @@ const ResultOptions = ({options}) => {
         <div key={op.name}>
           <a className="href-tag" href={op.link} target="_blank" rel="noreferrer">
             <div className="service-info">
-              <ResultService name={op.name}/>
+              <StreamLogos name={op.name}/>
               <div className="golden-text">{op.name}</div> 
               <div className="golden-text">
                 ({op.type.toUpperCase() === "BUY" ? "PURCHARSE" : op.type.toUpperCase()})

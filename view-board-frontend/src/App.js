@@ -7,7 +7,7 @@ import logo from './assets/viewboard-logo.png'
 
 import userService from './services/UserService'
 import ResultDisplay from './ResultDisplay';
-import ResultService from './ResultService';
+import { StreamLogos } from './components';
 
 const App = () => {
   const [searchEntity, setSearchEntity] = useState("")
@@ -29,10 +29,10 @@ const App = () => {
 
   const handleEnter = (e) => {
     if (e.key === 'Enter' && searchEntity.length > 0) {
-      /*userService.getTitleInfo(searchEntity)
+      userService.getTitleInfo(searchEntity)
         .then(response => {
           setSearchResults(response.result)
-        })*/
+        })
     }
   }
 
@@ -58,32 +58,22 @@ const App = () => {
       </div>
       {searchResults.length > 0 
         ? <div className="search-results">
-            {searchResults.map((result) => 
-              <div key={result.imdbId}> <ResultDisplay result={result} /> </div>
-            )}
+            {searchResults.map((result) => <div key={result.imdbId}> <ResultDisplay result={result} /> </div>)}
           </div> 
         : <div>
             <div className="initial-info-container">
               <h1 className='initial-info-title'>Millions of movies and TV Shows to Explore</h1>
               <h1 className='stream-stats'>20+ Streaming Platforms Supported</h1>
             </div>
-            <div className="image-column-one">
-                <ResultService name='ALL4'/> <ResultService name='APPLE'/> <ResultService name='BRITBOX'/>
-                <ResultService name='CRAVE'/> <ResultService name='CURIOSITY'/> <ResultService name='DISNEY'/>
-                <ResultService name='HBO'/> <ResultService name='HOTSTAR'/> <ResultService name='HULU'/>
-                <ResultService name='IPLAYER'/> <ResultService name='MUBI'/> <ResultService name='NETFLIX'/>
-                <ResultService name='NOW'/> <ResultService name='PARAMOUNT'/> <ResultService name='PEACOCK'/>
-                <ResultService name='PRIME'/> <ResultService name='SHOWTIME'/> <ResultService name='STAN'/>
-                <ResultService name='STARZ'/> <ResultService name='ZEE5'/>
-            </div>
+            <StreamLogos showAll={true} />
+            {upcomingResults.length > 0 ? 
+              <div className="image-slider">
+                <img className="upcoming-image" src={upcomingResults[curUpcoming].primaryImage.url} alt='upcoming'/>
+                <button className="upcoming-button" onClick={handleNextImage}>Next</button>
+              </div> :
+              <div> </div>
+            }
           </div>
-      }
-      {upcomingResults.length > 0 ? 
-        <div className="image-slider">
-          <img className="upcoming-image" src={upcomingResults[curUpcoming].primaryImage.url} alt='upcoming'/>
-          <button className="upcoming-button" onClick={handleNextImage}>Next</button>
-        </div> :
-        <div> </div>
       }
     </div>
   );
