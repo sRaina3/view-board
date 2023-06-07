@@ -1,0 +1,17 @@
+.image-column {
+  position: fixed;
+  right: 130px;
+  top: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: calc(100vh - 30px);
+}
+
+.image-column img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 12px;
+  border: 1.4px solid rgb(0, 0, 0);
+}

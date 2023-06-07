@@ -1,5 +1,7 @@
+import './StreamLogos.css'
+
 const StreamLogos = ({name, showAll}) => {
-  const imgs = [
+  let imgs = [
     {name: 'ALL4', url: 'https://seeklogo.com/images/C/Channel_4-logo-ADE347836C-seeklogo.com.png'},
     {name: 'APPLE', url: 'https://images.justwatch.com/icon/190848813/s100/icon.webp'},
     {name: 'BRITBOX', url: 'https://media.wired.co.uk/photos/606d9f697aff197af7c72c90/1:1/w_1999,h_1999,c_limit/britbox.jpg'},
@@ -20,17 +22,16 @@ const StreamLogos = ({name, showAll}) => {
     {name: 'STAN', url: 'https://www.stan.com.au/logo-square.png'},
     {name: 'STARZ', url: 'https://pbs.twimg.com/profile_images/1631466104102191106/mj0aFDgA_400x400.jpg'},
     {name: 'WOW', url: 'https://play-lh.googleusercontent.com/7rfUwUR3VVMk-gdqzOkof97UzVOXfethEDsFcDVaLO3ukAZDiDd1XsOjKELpfvPlAYE=w240-h480-rw'},
-    {name: 'ZEE5', url: 'https://m.media-amazon.com/images/I/51CNksbNcfL.png'}
   ]
 
   if (showAll) {
     return (
-      <div className="image-column-one"> 
+      <div className="image-column"> 
         {imgs.map(img =><div> <img src={img.url} alt="service"/> </div>)}
       </div>
     )
   }
-
+  imgs.push({name: 'ZEE5', url: 'https://m.media-amazon.com/images/I/51CNksbNcfL.png'})
   const pos = imgs.find(img => img.name === name)
   return (
     <div>
