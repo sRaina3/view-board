@@ -21,7 +21,7 @@ const StreamLogos = ({name, showAll}) => {
     {name: 'SHOWTIME', url: 'https://i0.wp.com/twincitiesfrugalmom.com/wp-content/uploads/2022/11/showtime-logo.jpg?ssl=1'},
     {name: 'STAN', url: 'https://www.stan.com.au/logo-square.png'},
     {name: 'STARZ', url: 'https://pbs.twimg.com/profile_images/1631466104102191106/mj0aFDgA_400x400.jpg'},
-    {name: 'WOW', url: 'https://play-lh.googleusercontent.com/7rfUwUR3VVMk-gdqzOkof97UzVOXfethEDsFcDVaLO3ukAZDiDd1XsOjKELpfvPlAYE=w240-h480-rw'},
+    {name: 'WOW', url: 'https://images.justwatch.com/icon/243229654/s100/icon.webp'},
   ]
 
   if (showAll) {

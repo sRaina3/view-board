@@ -1,19 +1,26 @@
 .vertical-navbar {
   position: fixed;
-  top: 1px;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 200px; 
-  height: 100vh; 
+  height: 95vh;
 }
 
 .vertical-navbar a {
   text-decoration: none;
-  color: #ffffff; 
-  margin-bottom: 10px; 
+  color: #000000; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  width: 100%;
+  height: 100px;
   font-size: 36px;
   font-weight: bold;
+  background: rgb(0,215,255);
+  background: linear-gradient(0deg, rgb(0, 166, 255) 0%, rgb(0, 101, 252) 100%);  
 }
 
 .vertical-navbar img {
