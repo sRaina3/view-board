@@ -19,8 +19,8 @@ const ResultService = ({name}) => {
     {name: 'PEACOCK', url: 'https://images.justwatch.com/icon/194173871/s100/icon.webp'},
     {name: 'PRIME', url: 'https://images.justwatch.com/icon/52449539/s100/icon.webp'},
     {name: 'SHOWTIME', url: 'https://i0.wp.com/twincitiesfrugalmom.com/wp-content/uploads/2022/11/showtime-logo.jpg?ssl=1'},
-    {name: 'STAN', url: 'https://play-lh.googleusercontent.com/r8Wd90rLnw22lgf8Xjtf-lPNfemQx8h4Ih6THAFnSiVskGtblXr5_ejpp6gTK_xuIw'},
-    {name: 'STARZ', url: 'https://play-lh.googleusercontent.com/ZF0lnNTgrJqZ-WLubeF09m_gLt4IaL7189Wv0F6uwHmO7gJB3Om5bhanXdJci8FenNuS'},
+    {name: 'STAN', url: 'https://www.stan.com.au/logo-square.png'},
+    {name: 'STARZ', url: 'https://pbs.twimg.com/profile_images/1631466104102191106/mj0aFDgA_400x400.jpg'},
     {name: 'WOW', url: 'https://play-lh.googleusercontent.com/7rfUwUR3VVMk-gdqzOkof97UzVOXfethEDsFcDVaLO3ukAZDiDd1XsOjKELpfvPlAYE=w240-h480-rw'},
     {name: 'ZEE5', url: 'https://m.media-amazon.com/images/I/51CNksbNcfL.png'}
   ]
