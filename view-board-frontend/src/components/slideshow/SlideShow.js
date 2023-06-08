@@ -1,16 +1,24 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 import './SlideShow.css'
 
 
 const SlideShow = ({upcomingResults}) => {
   const [curUpcoming, setCurUpcoming] = useState(0)
-  const delay = 5000
+  const timeoutRef = useRef(null);
+  const delay = 6000
+
+  const resetTimeout = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  }
 
   useEffect(() => {
-    setTimeout(
+    resetTimeout();
+    timeoutRef.current = setTimeout(
       () => {
-        if (curUpcoming === 8 - 1) {
+        if (curUpcoming === upcomingResults.length - 1) {
           setCurUpcoming(0)
         } else {
           setCurUpcoming(curUpcoming + 1)
@@ -18,17 +26,21 @@ const SlideShow = ({upcomingResults}) => {
       },
       delay
     );
-  }, [curUpcoming]);
+  }, [curUpcoming, upcomingResults.length]);
 
-  console.log(upcomingResults)
-  console.log(curUpcoming)
   return (
     <div>
       <div className="upcoming-slideshow">
         <div className="upcoming-slider" style={{ transform: `translate3d(${-curUpcoming * 100}%, 0, 0)` }}>
           {upcomingResults.map((result) => (
-            <div className='upcoming-image' key={result.id}>
+            <div className='upcoming-slide' key={result.id}>
               <img className="upcoming-image" src={result.primaryImage.url} alt='upcoming'/>
+              <div className="upcoming-title"> 
+                {result.originalTitleText.text}
+                <div className="release-date">
+                  {result.releaseDate.month}/{result.releaseDate.day}/{result.releaseDate.year}
+                </div>
+              </div>
             </div>
           ))}
         </div>

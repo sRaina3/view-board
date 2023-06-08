@@ -36,6 +36,9 @@ const getUpcoming = () => {
   const options = {
     method: 'GET',
     url: `${baseURLMD}titles/x/upcoming`,
+    params: {
+      limit: 50
+    },
     headers: {
       'X-RapidAPI-Key': apiKey,
       'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
