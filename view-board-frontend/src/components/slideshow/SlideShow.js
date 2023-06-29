@@ -38,9 +38,10 @@ const SlideShow = ({upcomingResults}) => {
               <div className="upcoming-title"> 
                 {result.originalTitleText.text}
                 <div className="release-date">
+                  Coming On <br></br>
                   {result.releaseDate.month}/{result.releaseDate.day}/{result.releaseDate.year}
                 </div>
-                <div className="release-date">
+                <div className="release-type">
                   {result.titleType.text}
                 </div>
                 <a className="imdb-tag" href={`https://www.imdb.com/title/${result.id}/`} target="_blank" rel="noreferrer">
