@@ -40,6 +40,9 @@ const SlideShow = ({upcomingResults}) => {
                 <div className="release-date">
                   {result.releaseDate.month}/{result.releaseDate.day}/{result.releaseDate.year}
                 </div>
+                <div className="release-date">
+                  {result.titleType.text}
+                </div>
               </div>
             </div>
           ))}
