@@ -43,6 +43,9 @@ const SlideShow = ({upcomingResults}) => {
                 <div className="release-date">
                   {result.titleType.text}
                 </div>
+                <a className="imdb-tag" href={`https://www.imdb.com/title/${result.id}/`} target="_blank" rel="noreferrer">
+                  <div className="imdb-upcoming-box">IMDb</div>
+                </a>
               </div>
             </div>
           ))}
