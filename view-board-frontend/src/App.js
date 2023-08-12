@@ -42,7 +42,9 @@ const App = () => {
               <h1 className='initial-info-title'>Millions of movies and TV Shows to Explore</h1>
               <h1 className='stream-stats'>20+ Streaming Platforms Supported</h1>
             </div>
-            <StreamLogos showAll={true} />
+            <div className="stream-logos-container">
+              <StreamLogos showAll={true} />
+            </div>
           </div>
       }
     </div>

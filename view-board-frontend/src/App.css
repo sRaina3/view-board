@@ -62,3 +62,24 @@ body {
   font-size: 40px;
   margin-top: 0px;
 }
+
+@media (max-width: 900px) {
+  .stream-logos-container {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    margin-top: 200px; 
+    margin-left: 100px;
+  }
+  
+  .initial-info-container {
+    margin-top: 500px;
+  }
+
+  .search-results {
+    margin-top: 500px;
+  }
+}
