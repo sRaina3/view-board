@@ -8,8 +8,6 @@ const Navbar = () => {
     <nav className='vertical-navbar'>
         <Link to='/'> <img src={logo} alt="Logo"/> </Link>
         <Link to='/Upcoming'>Upcoming</Link>
-        <Link to='/'>Placeholder</Link>
-        <Link to='/'>Placeholder</Link>
     </nav>
   )
 }
