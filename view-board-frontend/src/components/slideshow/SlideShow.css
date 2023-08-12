@@ -33,6 +33,10 @@
   white-space: normal;
 }
 
+.upcoming-title-small {
+  font-size: 40px;
+}
+
 .release-date {
   margin-top: 40px;
   font-family: Open Sans;
