@@ -28,6 +28,22 @@ const SlideShow = ({upcomingResults}) => {
     );
   }, [curUpcoming, upcomingResults.length]);
 
+  const displayName = (name) => {
+    if (name.length > 20) {
+      return (
+        <div className="upcoming-title-small">
+          {name}
+        </div>
+      )
+    } else {
+      return (
+        <div>
+          {name}
+        </div>
+      )
+    }
+  }
+
   return (
     <div>
       <div className="upcoming-slideshow">
@@ -35,8 +51,8 @@ const SlideShow = ({upcomingResults}) => {
           {upcomingResults.map((result) => (
             <div className='upcoming-slide' key={result.id}>
               <img className="upcoming-image" src={result.primaryImage.url} alt='upcoming'/>
-              <div className="upcoming-title"> 
-                {result.originalTitleText.text}
+              <div className="upcoming-title">
+                {displayName(result.originalTitleText.text)}
                 <div className="release-date">
                   Coming On <br></br>
                   {result.releaseDate.month}/{result.releaseDate.day}/{result.releaseDate.year}
