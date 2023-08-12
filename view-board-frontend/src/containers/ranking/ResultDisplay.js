@@ -3,7 +3,6 @@ import './ResultDisplay.css'
 import ResultOptions from './ResultOptions'
 
 const ResultDisplay = ({result}) => {
-  console.log(result)
   const displayImage = () => {
     if (result.posterURLs.original) {
       return (
@@ -17,8 +16,6 @@ const ResultDisplay = ({result}) => {
   }
 
   const displayStreamingInfo = (sites) => {
-    console.log(result.title)
-    console.log(sites)
     if (sites) {
       let options = []
       const serviceNames = Object.keys(sites)
